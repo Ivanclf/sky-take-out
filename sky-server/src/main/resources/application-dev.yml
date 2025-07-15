@@ -11,3 +11,17 @@ sky:
     access-key-id:
     access-key-secret:
     bucket-name: iefaaa
+<<<<<<< HEAD
+=======
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 0
+<<<<<<< HEAD
+=======
+  wechat:
+    appid:
+    secret:
+>>>>>>> fe24a12 (套餐业务和微信登录业务模块)
+>>>>>>> b6e7b9e (店铺营业状态设置业务)

@@ -1,0 +1,3 @@
+regex:access-key-secret:\s*\K[^\n]+==>
+regex:access-key-id:\s*\K[^\n]+==>
+regex:password:\s*\K[^\n]+==>
