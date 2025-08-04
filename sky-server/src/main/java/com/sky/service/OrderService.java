@@ -7,8 +7,6 @@ import com.sky.vo.OrderStatisticsVO;
 import com.sky.vo.OrderSubmitVO;
 import com.sky.vo.OrderVO;
 
-import java.util.List;
-
 public interface OrderService {
 
     /**
@@ -101,4 +99,10 @@ public interface OrderService {
      * @param id
      */
     void complete(Long id);
+
+    /**
+     * 客户催单
+     * @param id
+     */
+    void reminder(Long id);
 }
