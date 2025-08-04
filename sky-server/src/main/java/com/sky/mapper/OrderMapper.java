@@ -1,8 +1,15 @@
 package com.sky.mapper;
 
+import com.github.pagehelper.Page;
+import com.sky.dto.OrdersPageQueryDTO;
 import com.sky.entity.Orders;
+import com.sky.vo.OrderStatisticsVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Mapper
 public interface OrderMapper {
@@ -25,4 +32,45 @@ public interface OrderMapper {
      * @param orders
      */
     void update(Orders orders);
+
+    /**
+     * 分页查询订单
+     * @param ordersPageQueryDTO
+     * @return
+     */
+    Page<Orders> pageQuery(OrdersPageQueryDTO ordersPageQueryDTO);
+
+    /**
+     * 根据ID查询订单
+     * @param id
+     * @return
+     */
+    @Select("select * from orders where id = #{id}")
+    Orders getById(Long id);
+
+    /**
+     * 用于替换微信支付跳过后的订单状态的问题
+     * @param paid
+     * @param toBeConfirmed
+     * @param now
+     * @param orderNumber
+     */
+    @Update("update orders set pay_status = #{paid}, status = #{toBeConfirmed}, checkout_time = #{now} where number = #{orderNumber} and pay_status = 0")
+    void updateStatus(Integer paid, Integer toBeConfirmed, LocalDateTime now, String orderNumber);
+
+    /**
+     * 获取各个状态的订单数量统计
+     * @return
+     */
+    @Select("select count(*) from orders where status = #{status}")
+    Integer countStatus(Integer status);
+
+    /**
+     * 根据订单状态和下单时间查询订单
+     * @param status
+     * @param orderTime
+     * @return
+     */
+    @Select("select * from orders where status = #{status} and order_time < #{orderTime}")
+    List<Orders> getByStatusAndOrderTimeLT(Integer status, LocalDateTime orderTime);
 }
