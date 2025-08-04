@@ -7,6 +7,7 @@ sky:
     username: root
     password: 123456
   alioss:
+<<<<<<< HEAD
     endpoint: oss-cn-guangzhou.aliyuncs.com
 <<<<<<< HEAD
     access-key-id:
@@ -17,7 +18,16 @@ sky:
 >>>>>>> 0af0a27 (更改了一些信息)
     bucket-name: iefaaa
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
+>>>>>>> 9ced54b (更改了一些信息)
+>>>>>>> 03552d1 (资料只应该在data里)
   redis:
     host: localhost
     port: 6379
@@ -26,6 +36,7 @@ sky:
 <<<<<<< HEAD
 =======
   wechat:
+<<<<<<< HEAD
 <<<<<<< HEAD
     appid:
     secret:
@@ -37,4 +48,11 @@ sky:
     appid:
     secret:
 >>>>>>> 0af0a27 (更改了一些信息)
+<<<<<<< HEAD
 >>>>>>> 8e1b252 (更新了readme)
+=======
+=======
+    appid:
+    secret:
+>>>>>>> 9ced54b (更改了一些信息)
+>>>>>>> 03552d1 (资料只应该在data里)
