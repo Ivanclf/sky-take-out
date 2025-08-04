@@ -8,8 +8,13 @@ sky:
     password: 123456
   alioss:
     endpoint: oss-cn-guangzhou.aliyuncs.com
+<<<<<<< HEAD
     access-key-id:
     access-key-secret:
+=======
+    access-key-id:
+    access-key-secret:
+>>>>>>> 0af0a27 (更改了一些信息)
     bucket-name: iefaaa
 <<<<<<< HEAD
 =======
@@ -21,7 +26,15 @@ sky:
 <<<<<<< HEAD
 =======
   wechat:
+<<<<<<< HEAD
     appid:
     secret:
 >>>>>>> fe24a12 (套餐业务和微信登录业务模块)
+<<<<<<< HEAD
 >>>>>>> b6e7b9e (店铺营业状态设置业务)
+=======
+=======
+    appid:
+    secret:
+>>>>>>> 0af0a27 (更改了一些信息)
+>>>>>>> 8e1b252 (更新了readme)
